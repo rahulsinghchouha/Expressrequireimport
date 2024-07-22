@@ -123,6 +123,26 @@ You're welcome! If you have any more questions or need further assistance, feel 
 
 
 
+=========================>
+use() Method. Express JSServer Side ProgrammingProgramming. The app. use() method mounts or puts the specified middleware functions at the specified path. 
+
+
+=====================>
+Why Use cors() Middleware
+Development Environment:
+
+During development, your React frontend might be running on http://localhost:3000, while your Express backend might be running on http://localhost:5000. Browsers block requests from the frontend to the backend due to the Same-Origin Policy.
+The cors() middleware allows you to enable CORS so that your frontend can communicate with your backend.
+Security:
+
+By default, CORS middleware allows requests from any origin. However, you can configure it to allow only specific origins, methods, headers, etc., which adds a layer of security.
+Basic Usage
+Using cors() without any options will enable CORS for all origins:
+
+javascript
+Copy code
+const cors = require('cors');
+app.use(cors());
 
 
 
