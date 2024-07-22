@@ -144,6 +144,11 @@ Copy code
 const cors = require('cors');
 app.use(cors());
 
-
+==========================>
+why app.use(express.json());
+Example Usage:
+When a client sends a POST request with JSON data, the express.json() middleware will parse this data and make it available under req.body.
+=====================>
+npm i body-parser for parse the data take the data from body
 
 
