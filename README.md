@@ -19,6 +19,47 @@ function functionOne() {
   console.log('Function One');
 }
 
+Adding maxAge: 14400 to the CORS configuration specifies how long (in seconds) the results of a preflight request (HTTP OPTIONS) can be cached by the browser. Here's how it fits into the code and what it does:
+
+javascript
+Copy code
+app.use(
+    cors({
+        origin: "http://localhost:3000",
+        credentials: true,
+        maxAge: 14400,
+    })
+);
+Here's the updated explanation including maxAge:
+
+app.use(cors(...)):
+
+app.use is a method used to mount middleware functions in an Express application.
+cors is the middleware function being used here to enable CORS.
+cors({ ... }):
+
+This is a configuration object being passed to the cors middleware to specify how CORS should be handled.
+origin: "http://localhost:3000":
+
+This specifies the allowed origin for requests. In this case, only requests coming from http://localhost:3000 are allowed.
+This is useful when you want to restrict which domains can access your resources.
+credentials: true:
+
+This setting allows cookies and other credentials to be included in cross-origin requests.
+By default, browsers do not send credentials with cross-origin requests for security reasons. Setting credentials: true tells the browser to include credentials in requests to the specified origin.
+maxAge: 14400:
+
+This setting specifies that the results of the preflight request can be cached by the browser for 14,400 seconds (4 hours).
+Preflight requests are made by browsers to determine if the actual request is safe to send. By caching the results of these requests, you can reduce the number of preflight requests that are made, improving the performance of your application.
+In summary, this configuration allows your Express.js server to accept requests from http://localhost:3000, include credentials in those requests, and cache the results of preflight requests for 4 hours. This can help improve the efficiency and performance of your application during development.
+
+
+
+
+
+
+
+
 function functionTwo() {
   console.log('Function Two');
 }
