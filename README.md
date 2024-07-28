@@ -800,6 +800,11 @@ app.post('/upload', async (req, res) => {
   }
 });
 In this example, await parseForm(req) waits for the Promise returned by parseForm to resolve, and then you can access the parsed fields and files
+=======================>
+Which to use:
+
+If you want to export a single object or function, use module.exports.
+If you want to export multiple functions or properties, use exports.
 
 
 
