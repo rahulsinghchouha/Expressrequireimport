@@ -1493,20 +1493,35 @@ app.use(cors({
   credentials: true
 }));
 By following these steps, the cookie containing the token will be sent with every request to your backend, allowing for consistent and secure authentication.
+===============================================>
+how many coockie can we store in browser
+ChatGPT
+The number of cookies you can store in a browser can vary based on several factors, including the browser itself and the size of the cookies. However, there are some general limits that most modern browsers adhere to:
+
+Total Number of Cookies per Domain: Most browsers allow around 50 cookies per domain. This limit can vary slightly between browsers, but 50 is a common number.
+
+Total Number of Cookies: There is also a limit on the total number of cookies a browser can store. This limit is generally around 3000 cookies.
+
+Size of Each Cookie: Each cookie can be up to 4 KB in size. This size includes both the name and the value of the cookie as well as any attributes (such as expiration, path, domain, etc.).
+
+Total Size of All Cookies per Domain: Browsers also limit the total size of all cookies that can be stored for a single domain. This limit is usually around 4 KB per cookie, but there can be a limit on the total size for all cookies per domain as well (around 100 KB).
+
+Different browsers may have slightly different limits, but the above numbers are good general guidelines. If you need to store more data than cookies can handle, consider using other web storage options like localStorage or sessionStorage, which can hold larger amounts of data (typically 5-10 MB).
+
+Here are some examples of browser limits:
+
+Google Chrome: Typically allows 180 cookies per domain and a total of 7200 cookies.
+Mozilla Firefox: Generally allows 150 cookies per domain and a total of 8192 cookies.
+Safari: Allows around 50 cookies per domain.
+Microsoft Edge: Similar to Chrome, allows around 50 cookies per domain.
+To check the exact limits for a specific browser, you can refer to the browser's documentation or test by setting cookies programmatically and observing the behavior.
 
 
-2/2
 
 
 
 
 
-
-Was this response better or worse?
-
-Better
-
-Worse
 
 Same
 
